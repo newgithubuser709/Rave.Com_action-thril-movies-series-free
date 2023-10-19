@@ -1,0 +1,881 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --gray: rgba(255, 255, 255, 0.781);
+}
+
+
+/* _____________ jarallax VIDEO ____________________________________________________________________ */
+
+.jarallax {
+    height: 120vh;
+    width: 100vw - 3px;
+    display: block;
+    overflow: hidden;
+}
+
+
+/* _______________ HEADER NAV ______________________________________________ */
+
+.header nav {
+    justify-content: space-between;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 19px 0 0 0;
+}
+
+.header nav::before {
+    width: .1px;
+    height: 29px;
+    position: absolute;
+    left: 4px;
+    top: 23px;
+    background-color: rgba(255, 255, 255, 0.71);
+    content: '';
+}
+
+
+/* nav child  1  */
+
+
+/*
+    un comment to see nav line  
+*/
+
+
+/* .nav-anim-line {
+    width: 60%;
+    height: .5px;
+    background-color: white;
+    position: relative;
+    margin-right: 60px;
+    margin-top: 10px;
+}
+
+.nav-anim-line::after {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: white;
+    position: absolute;
+    content: '';
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+} */
+
+
+/* nav child  2 */
+
+.header_logo {
+    position: absolute;
+    left: 17px;
+    top: 19px;
+    display: flex;
+}
+
+.header_logo img {
+    width: 35px;
+    display: block;
+}
+
+
+/* logo child 2    */
+
+.header_logo_text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 18px;
+    width: max-content;
+}
+
+.header_logo_hover_box img {
+    transition: width 0.7s, transform 0.7s, opacity 0.5s;
+    width: 16px;
+    transform: translateX(-10px);
+    transition-delay: 0.1s;
+    opacity: 0;
+}
+
+.header_logo_hover_box p {
+    font-size: 13px;
+    font-weight: 400;
+    opacity: 70%;
+    padding-right: 17px;
+}
+
+.header_logo_hover_box {
+    transition: opacity 0.5s;
+    margin-left: 18px;
+    opacity: 0;
+    padding-top: 9px;
+}
+
+.header_logo_hover_box_SCRIPT {
+    opacity: 100;
+}
+
+.header_logo_hover_box_SCRIPT img {
+    transform: translateX(0);
+    opacity: 100;
+    width: 21px;
+}
+
+
+/* nav child   3  */
+
+.nav-side-search {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.nav-side-search-icon {
+    background: transparent;
+    width: 35px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.nav-side-search-icon i {
+    font-size: 16px;
+    transition: 0.3s;
+    padding-top: 5px;
+}
+
+.nav_side_search_input_animater_closer {
+    font-size: 0px;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.9s;
+}
+
+.nav_side_search_input_animater_closer i {
+    transition: color 0.3s;
+}
+
+.nav_side_search_input_animater_closer i:hover,
+.nav-side-search-icon i:hover {
+    color: var(--gray);
+}
+
+.nav_side_search_input_animater_closer_SCRIPT {
+    opacity: 100 !important;
+    font-size: 15px;
+    padding: 0 9px;
+}
+
+.nav_side_search_input_animater {
+    width: 0px;
+    overflow: hidden;
+    transition: cubic-bezier(.42, .2, .25, .72)0.7s;
+}
+
+.nav_side_search_input_animater_SCRIPT {
+    width: 250px !important;
+}
+
+.nav_side_search_input_container_input {
+    width: 250px;
+    height: 26px;
+    background: rgba(255, 255, 255, 0.185);
+    border: none;
+    outline: none;
+    padding-left: 7px;
+    color: white;
+    font-weight: 100;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-style: italic;
+    font-family: 'Nothing You Could Do', cursive;
+}
+
+.nav_side_search_input_container_input::placeholder {
+    padding-left: 3px;
+    text-transform: capitalize;
+    color: rgba(255, 255, 255, 0.55);
+    letter-spacing: 1px;
+    font-size: 13px;
+}
+
+
+/* nav child   4 */
+
+.toggle {
+    position: relative;
+    width: 35px;
+    height: 30px;
+    position: relative;
+}
+
+.Toggler_Btn_script i:first-child {
+    opacity: 0 !important;
+    /* transform: translateX(15px); */
+}
+
+.Toggler_Btn_script i:last-child {
+    opacity: 100 !important;
+}
+
+.toggle i:first-child {
+    opacity: 100;
+}
+
+.toggle i:last-child {
+    opacity: 0;
+}
+
+.toggle i {
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    position: absolute;
+    color: var(--gray);
+    font-size: 30px;
+    /* transition: opacity ease-in-out 0.8s, transform ease-in-out 0.8s, color ease-in-out 0.2s; */
+    transition: ease 0.45s;
+    color: white;
+}
+
+.toggle:hover i {
+    color: var(--gray);
+}
+
+.wrapper-toggle {
+    position: relative;
+}
+
+
+/*  nav box show on toggle btn click  */
+
+.toggled_box_SCRIPT {
+    height: 290px!important;
+}
+
+.slide-prev {
+    width: 100vw;
+    height: 0px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.267);
+    margin: 27px 0 30px 0;
+    transition: 0.7s cubic-bezier(.62, 0, .5, .68);
+}
+
+.slide-prev ul {
+    margin: 10px 0;
+    padding: 0 25px;
+    width: 100%;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slide-prev ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.slide-prev ul li a {
+    font-size: 12px;
+    padding: 12px 0;
+    letter-spacing: .9px;
+    font-weight: 100;
+    display: inline-block;
+    text-transform: capitalize;
+    transition: 0.5s;
+    width: max-content;
+    position: relative;
+}
+
+.slide-prev ul li a::after {
+    content: '';
+    background-color: white;
+    width: 0;
+    height: .5px;
+    left: 0;
+    bottom: 3px;
+    position: absolute;
+    transition: ease 0.7s;
+}
+
+.slide-prev ul li a:hover::after {
+    width: 100%;
+}
+
+.slide-prev-ancor-icon {
+    width: 25px;
+    font-size: 12px;
+}
+
+.nav-search-box {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.824);
+    margin: 10px 0;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-search-box i {
+    font-size: 15px;
+    padding: 0 10px;
+}
+
+.nav_search_icon::after {
+    display: none;
+}
+
+
+/* clears the ‘X’ from Chrome */
+
+.search-input {
+    flex: 1;
+    border: none;
+    height: 30px;
+    outline: none;
+    background: transparent;
+    padding-left: 10px;
+    letter-spacing: .2px;
+    color: black;
+    font-family: 'Nothing You Could Do', cursive;
+    font-size: 15px;
+}
+
+.search-input::placeholder {
+    color: rgba(0, 0, 0, 0.696);
+    font-weight: 600;
+    text-transform: capitalize;
+    padding-left: 3px;
+    font-size: 13px;
+}
+
+.nav_search_icon {
+    font-size: 20px;
+    color: black !important;
+    padding-right: 14px;
+    transition: 0.3s;
+}
+
+.nav_search_icon:hover {
+    color: rgba(57, 57, 57, 0.861) !important;
+    transform: scale(1.1);
+}
+
+
+/* _______________ HERO SECTION ______________________________________________ */
+
+.hero {
+    height: 100%;
+}
+
+.hero-jar {
+    height: 480px;
+    display: flex;
+    color: white;
+    width: 100%;
+}
+
+
+/* HERO JAR box 1  anim line on left side */
+
+.hero_anim_line {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    pointer-events: none;
+}
+
+.hero_anim_line::after {
+    width: 1px;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    content: '';
+}
+
+.hero_anim_line_circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: white;
+    margin: 30px 0;
+}
+
+
+/* HERO JAR box 2  have content in right side of anim line */
+
+.hero_content {
+    width: 100%;
+}
+
+.hero_swiping_section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+
+/*  Hero swiping section ______________________________________slide 1___________________ */
+
+.signup_login_container {
+    width: 100%;
+    height: 100%;
+    padding: 16px 0 0 30px;
+    font-family: 'Josefin Sans', sans-serif !important;
+}
+
+.hero_line_match {
+    margin: 21px 0;
+    font-family: 'Josefin Sans', sans-serif !important;
+}
+
+.signup_login_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-transform: capitalize;
+}
+
+.signup_text h3 {
+    text-transform: capitalize;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    position: relative;
+    width: max-content;
+    user-select: none;
+}
+
+.signup_text h3::after {
+    position: absolute;
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background-color: red;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -21px;
+}
+
+.input_changer-container {
+    position: relative;
+    height: 30px;
+}
+
+.input_changer_box {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.signup_number_input_box {
+    display: none;
+}
+
+.signup-email-input,
+.signup-number-input,
+.signup-pass-input {
+    max-width: 250px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    border-left: 2px solid white;
+    padding-left: 10px;
+    transition: ease 0.7s;
+    text-transform: capitalize;
+}
+
+.signup-email-input::placeholder,
+.signup-number-input::placeholder,
+.signup-pass-input::placeholder {
+    padding-left: 7px;
+    color: rgba(207, 207, 207, 0.788);
+}
+
+.signup-email-input:focus,
+.signup-number-input:focus,
+.signup-pass-input:focus {
+    border-color: red;
+}
+
+.continue_google {
+    display: flex;
+    align-items: center;
+}
+
+.continue_google img {
+    display: block;
+    width: 19px;
+    margin-right: 12px;
+}
+
+.continue_google p {
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    flex-wrap: 100;
+    position: relative;
+    padding-top: 5px;
+}
+
+.continue_google p::after {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: rgb(210, 2, 2);
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 2px;
+    right: -30px;
+    border-radius: 100%;
+    opacity: 0;
+    transition: ease 0.5s;
+}
+
+.continue_google:hover p::after {
+    opacity: 100;
+}
+
+.login_text h3 {
+    font-size: 13px;
+    text-transform: none;
+    font-weight: 300;
+}
+
+.login_text h3 span {
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: rgb(196, 0, 0);
+    display: inline-block;
+    padding: 0 7px;
+    transition: 0.4s;
+    position: relative;
+    cursor: pointer;
+}
+
+.login_text h3 span::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    right: -12px;
+    transform: translateY(-50%);
+    background-color: white;
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+.login_text h3 span:hover:after {
+    opacity: 100;
+}
+
+.login_text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.account-form-btn-section {
+    display: flex;
+}
+
+.account-form-btn-section-num-email-change {
+    position: relative;
+    height: 40px;
+    width: 160px;
+    overflow: hidden;
+}
+
+.account-form-btn-section-num-email-change-inner_SCRIPT {
+    transform: translateY(-40px);
+}
+
+.account-form-btn-section-num-email-change-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 80px;
+    transition: ease 0.7s;
+}
+
+.account-form-btn-section-use-num-btn .a,
+.account-form-btn-section-use-email-btn .a {
+    border: 1px solid rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 0, 0);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.account-form-btn-section-use-email-btn .a:hover,
+.account-form-btn-section-use-num-btn .a:hover {
+    background-color: rgba(255, 0, 0, 0);
+}
+
+.account-form-btn-section-signup-btn a {
+    border: 1px solid white;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: white;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.account-form-btn-section-signup-btn a:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+
+/*  Hero swiping section ______________________________________slide 2___________________ */
+
+
+/*  Hero swiping section box 1  */
+
+.hero_swiping_section_box_1 {
+    height: 100%;
+    padding-left: 100px;
+    min-width: 300px;
+    width: max-content;
+}
+
+.hero_swiping_section_box_1_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    height: 100%;
+    user-select: none;
+}
+
+.hero_swiping_section_box_1_text h3 {
+    text-transform: capitalize;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.hero_swiping_section_box_1_text h3 i {
+    padding-left: 5px;
+    animation: hero_swiping_section_box_1_text_icon_animate ease infinite 2s;
+}
+
+@keyframes hero_swiping_section_box_1_text_icon_animate {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 100;
+    }
+    50% {
+        opacity: 100;
+    }
+    100% {
+        transform: translateX(14px);
+        opacity: 0;
+    }
+}
+
+.hero_swiping_section_box_1_text h4 {
+    font-size: 12px;
+    padding: 7px 0;
+    font-weight: 100;
+    line-height: 1.5;
+    color: var(--gray);
+}
+
+
+/*  Hero swiping section box 2  */
+
+.hero_swiping_section_box_2 {
+    height: 100%;
+}
+
+.hero_swiping_section_box_2_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 100%;
+    text-align: right;
+    flex: 1;
+    max-width: 500px;
+    position: relative;
+}
+
+
+/*  Hero swiping section box 2 content  box 1 */
+
+.hero_swiping_section_box_2_content_icons {
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    margin-bottom: 70px;
+}
+
+.hero_swiping_section_box_2_content_icons ul {
+    position: relative;
+    height: max-content;
+    padding: 10px 0;
+}
+
+.hero_swiping_section_box_2_content_icons ul::before {
+    content: '';
+    position: absolute;
+    background-color: rgb(255, 0, 0);
+    height: 100%;
+    width: 1px;
+    top: 0;
+    right: 3px;
+}
+
+.hero_swiping_section_box_2_content_icons ul li {
+    list-style: none;
+}
+
+.hero_swiping_section_box_2_content_icons ul li a {
+    display: inline-block;
+    margin: 0 15px;
+    padding: 7px 0;
+    transition: 0.5s;
+}
+
+.hero_swiping_section_box_2_content_icons ul li a:hover {
+    padding-right: 10px;
+}
+
+.hero_swiping_section_box_2_content_icons img {
+    display: block;
+    width: 14px;
+}
+
+
+/*  Hero swiping section box 2 content  box 2 */
+
+.hero_swiping_section_box_2_content_li ul {
+    display: flex;
+}
+
+.hero_swiping_section_box_2_content_li ul li {
+    list-style: none;
+    text-transform: capitalize;
+    margin: 0 0 29px 25px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+    letter-spacing: 1.4px;
+    position: relative;
+}
+
+.first_signup:hover .first_signup_text {
+    opacity: 100;
+}
+
+.first_signup_text {
+    position: absolute;
+    right: 0;
+    top: -66px;
+    text-align: left;
+    font-size: 9px;
+    font-weight: 100;
+    width: max-content;
+    background-color: rgba(0, 0, 0, 0.368);
+    padding: 10px 19px;
+    letter-spacing: 1.5px;
+    line-height: 1.75;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity ease 0.9s;
+    text-transform: uppercase;
+}
+
+.hero_swiping_section_box_2_content_li ul li i {
+    padding-right: 7px;
+    font-size: 16px !important;
+    color: rgba(164, 164, 164, 0.765);
+}
+
+.hero_swiping_section_box_2_content_li ul li::after {
+    width: 0;
+    height: 1px;
+    background-color: white;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    content: '';
+    transition: 0.4s;
+}
+
+.hero_swiping_section_box_2_content_li ul li:hover::after {
+    width: 100%;
+}
+
+.hero_swiping_section_box_2_content_li ul li:hover {
+    color: rgb(229, 229, 229);
+}
+
+
+/*  Hero swiping section box 2 content  box 3 */
+
+.hero_swiping_section_box_2_content_text p {
+    font-size: 12px;
+    text-transform: capitalize;
+    line-height: 1.5;
+    transition: 3s;
+    color: rgb(255, 255, 255);
+}
+
+.red {
+    color: rgba(255, 47, 0, 0.995);
+    text-decoration: none;
+    margin: 0 3px;
+    display: inline-block;
+}
+
+.check_jarallax {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+}
+
+.check_jarallax a {
+    color: blue;
+    text-decoration: underline;
+    font-size: 15px;
+    margin: 15px;
+}

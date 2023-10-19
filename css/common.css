@@ -1,0 +1,62 @@
+/* _______________ OVERLAY ON HEADER , HERO ______________________________________________ */
+
+.overlay {
+    background: radial-gradient(rgba(0, 0, 0, 0.121), rgba(0, 0, 0, 0.363));
+    width: 100%;
+    height: 100%;
+}
+
+
+/* _______________ CONTAINER ______________________________________________ */
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+@font-face {
+    /* cursive : only 400 font-weight */
+    font-family: 'Nothing You Could Do', cursive;
+    /* simple : only 300 , 400 , 500 , 700 font-weight */
+    font-family: 'Ubuntu', sans-serif;
+    /* for sign up  simple  */
+    font-family: 'Josefin Sans', sans-serif;
+    /* url  */
+    src: url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Ubuntu:wght@300;400;500;700&display=swap');
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* _____________ BODY ____________________________________________________________________ */
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+}
+
+.submit-btn {
+    display: flex;
+}
+
+.btn a,
+.btn .a {
+    width: 160px;
+    height: 40px;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    transition: ease 0.5s;
+}
